@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com//css?family=Montserrat&display=swap');
+
+* {
+
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* modal styling */
+ .modal {
+    display: none;    /*to hide in webpage */
+    position: fixed;    /* modal is always in view if scrolling */
+    top: 0;           /* to place in centre of screen*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;   /* allows to scroll if needed */
+    z-index: 1;       /* modal is on top of everything on page */
+    background-color: rgba(0, 0, 0, 0.51);    /* black with some opacity */
+  }
+
+  /* modal content box */
+  .modal-content {
+    max-width: 600px;     /* change these to accomodate form */
+    height: 300px;          /* change these to accomodate form */
+    margin: auto;
+    background-color: white;
+    color: black;
+    position: absolute;          /* to place in centre of overlay*/
+    top: 0;           /* to place in centre */
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* modal close btn*/
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  /* modal close btn hover */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+  
+
+
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #333;
+  color: white;
+ }
+
+ .brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+ }
+
+ .navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+ }
+
+ .navbar-links li {
+  list-style: none;
+ }
+
+ .navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+ } 
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1 rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* can remove this h2 part */
+h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%; /* 100% of container*/
+}
+
+.wrapper {
+  max-width: 900px; /**/
+  margin: auto; /* makes ime stay in middle when expand */
+  box-shadow: 30px 0px 40px rgba (0, 0, 0, 0.1) -30px 0px 40px rgba (0, 0, 0, 0.1); /* left & right shadow around the img */
+}
+
+#landing {
+  background-color: #2B2D2E; 
+  color: white;
+}
+
+#landing-text {
+  display: flex;
+  flex: 0 1 40vw;
+  height: 30vh; /* height of white landing vp */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* includes white space in landing before image */ 
+#landing-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10vh; /* distance to image*/
+  flex: 0 1 60vw;
+  margin: 0;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 2px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0 ;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background 500ms ease;
+}
+
+.btn:hover {
+/*   background: #ffd346; */
+/*   border: 2px #ccc solid; */
+  border: 2px red solid;
+  background: red;
+}
+
+/* can remove this styling for h2 */
+#header h2 {
+  border-left: dotted 1px #fff;
+  border-left: dotted 1px #fff;
+  display: inline-block;  /* makes lines display along same line as text */
+  padding-right: 1rem; /* provides some space fromn the text */
+  padding-left: 1rem;
+}
+
+/* set backgd to black & white text */
+.caption-block {
+  background-color: #2B2D2E; 
+  color: white;  
+}
+
+/* center aligning the text */
+.caption {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/* set text color of btns */
+#view-work-a {
+  color: white;
+}
+
+#view-work-b {
+  color: white;
+}
+
+.roquero-footer {
+  align-items: center;
+  line-height: 25%;
+/*   background-color: #2B2D2E;
+  color: white; */
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* screen sizes 500px and up. Only kicks in if above 500px */
+@media (min-width: 480px) {  
+  .caption-block {
+    display: flex;  /* need how screen formatting should look like when expanded */
+    justify-content: space-around;
+  }
+}
+
+/* screen sizes 700px and up. */
+@media (min-width: 700px) {
+  .btn {
+    padding: 1rem 3rem;  /* to make button bigger when hits over 700px screen */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* header {
+    background-color: #417077;  /* header color 
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* links 
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px ;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-brand {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;    /* to stack on top of each other
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {    /* for 2nd bar 
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {    /* for 1st bar 
+    transform: translateY(8px) rotate(45deg);   /* to stack on top of each other 
+  }
+  .hamburger.active .bar:nth-child(3) {     /* for 3rd bar 
+    transform: translateY(-8px) rotate(-45deg); 
+  }
+  .nav-menu {
+    position: fixed;  /* ensures menu stays on screen 
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    }
+
+    .nav-item {
+      margin: 16px 0;
+    }
+
+    .nav-menu.active {
+      left: 100;
+    }
+} */
+
+
+
+
+
+/* 
+  
+  h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  
+  img {
+    display: block;
+    width: 100%; /* 100% of container
+  }
+  
+  main {
+    max-width: 900px; /*
+    margin: auto; /* makes ime stay in middle when expand 
+    box-shadow: 30px 0px 40px rgba (0, 0, 0, 0.1) -30px 0px 40px rgba (0, 0, 0, 0.1); /* left & right shadow around the img 
+    
+  }
+  
+  #landing {
+    background: white;
+    
+  }
+  
+  #landing-text {
+    display: flex;
+    flex: 0 1 40vw;
+    height: 30vh; /* height of white landing vp 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  #landing-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+  }
+  
+  .btn {
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background 500ms ease;
+  }
+  
+  .btn:hover {
+    background: #ffd346;
+    border: 1px #ccc solid;
+  } */
